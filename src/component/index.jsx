@@ -21,13 +21,13 @@ export default function Profile(){
     return(
         <>
             <div>
-                <header class="text-left p-6 mt-0 font-bold text-gray-800">Nancy</header>
-                <section class="p-6 text-left flex justify-between gap-5">
-                    <div class="max-w-2xl">
-                        <h1 class="text-2xl md:text-3xl font-bold text-gray-800">RAJOMALAHY Ratovonirina Nancy</h1> 
-                        <h2 class="text-lg md:text-xl text-black-600 mt-1">Développeuse frontend</h2>
-                        <div class="">
-                            <p class="mt-4 text-gray-700 leading-relaxed">
+                <header className="text-left font-bold text-gray-800">Nancy</header>
+                <section className="p-6 text-left flex flex-col lg:flex-row  justify-between gap-5 ">
+                    <div className="max-w-2xl">
+                        <h1 className="text-2xl md:text-3xl font-bold text-gray-800">RAJOMALAHY Ratovonirina Nancy</h1> 
+                        <h2 className="text-lg md:text-xl text-black-600 mt-1">Développeuse frontend</h2>
+                        <div>
+                            <p className="mt-4 text-gray-700 leading-relaxed ">
                                 Passionnée par le développement web, 
                                 je suis une développeuse frontend spécialisée dans la création d’interfaces modernes,
                                 réactives et intuitives. J'utilise principalement React.js,
@@ -37,60 +37,81 @@ export default function Profile(){
                             </p>
                         </div>
                         <div class="mt-4 text-left flex gap-3">
-                            <img src={link} class="h-5 w-5"/>
-                            <img src={github} class="h-6 w-6"/>
-                            <img src={insta} class="h-6 w-6"/>
-                            <img src={mail} class="h-6 w-6"/>
+                            <img src={link} className="h-5 w-5"/>
+                            <img src={github} className="h-6 w-6"/>
+                            <img src={insta} className="h-6 w-6"/>
+                            <img src={mail} className="h-6 w-6"/>
                         </div>
                     </div>
                     <div class="max-w-lg">
-                        <img class="h-70 w-80 object-cover rounded-full" src={nancy}/>
+                        <img className="h-70 w-80 object-cover rounded-full" src={nancy}/>
                     </div>
                 </section>
 
                 {/* Technologie */}
                 <section>
                     <div>
-                        <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Technologies</h1>
+                        <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Technologies</h1>
                     </div>
-                    <div class="mt-10 flex justify-center gap-8">
-                        <img src={html} class="h-15 w-15 animate-bounce "/>
-                        <img src={css} class="h-15 w-15 animate-bounce "/>
-                        <img src={javascript} class="h-15 w-15 animate-bounce "/>
-                        <img src={github} class="h-15 w-15 animate-bounce "/>
-                        <img src={react} class="h-15 w-15 animate-bounce "/>
-                        <img src={vite} class="h-15 w-15 animate-bounce " style={{ animationDelay: '6s' }}/>
+                    <div class="mt-10 flex flex-wrap justify-center gap-8">
+                        <img src={html} className="h-16 w-16 animate-bounce "/>
+                        <img src={css} className="h-16 w-16 animate-bounce "/>
+                        <img src={javascript} className="h-16 w-16 animate-bounce "/>
+                        <img src={github} className="h-16 w-16 animate-bounce "/>
+                        <img src={react} className="h-16 w-16 animate-bounce "/>
+                        <img src={vite} className="h-16 w-16 animate-bounce duration-500"/>
                     </div>
                 </section>
 
                 {/* Projets */}
-                <section>
+                <section className=''>
                     <div>
-                        <h1 class="mt-10 text-2xl md:text-3xl font-bold text-gray-800">Projets</h1>
+                        <h1 className="mt-10 text-2xl md:text-3xl font-bold text-gray-800">Projets</h1>
                     </div>
-                    <div>
-                        <div>
+                    <div className="mt-10">
+                        <div className="flex flex-col lg:flex-row justify-around p-8">
                             <div>
-                                <img src={site} class="w-90 h-60"  alt="" />
+                                <img src={site} className="w-90 h-60"  alt="" />
                             </div>
-                            <div>
-                                <p></p>
+                            <div className="text-left max-w-xl">
+                                <h1 className="md:text-xl text-black-600 mt-1">Site web de menus restaurant ZOMATEL</h1>
+                                <p className="text-gray-700 leading-relaxed">
+                                    J’ai conçu et développé un site web dynamique pour le restaurant ZOMATEL, permettant aux clients de consulter l’ensemble des menus disponibles
+                                    avec une interface moderne, intuitive et responsive. Grâce à l’utilisation de React.js et du framework Bootstrap, ce site offre une navigation fluide,
+                                    une mise en page claire, ainsi qu’une compatibilité optimale sur tous les types d’appareils (ordinateurs, tablettes, smartphones).
+                                    L’objectif était de valoriser les plats proposés tout en facilitant l’accès à l’information pour les visiteurs.
+                                </p>
+                                <small>Github : https://github.com/Rajomalahy/siteWeb_Hotel</small>
                             </div>
                         </div>
-                        <div>
+                        <div className="flex flex-col lg:flex-row justify-around p-8">
                             <div>
-                                <img src={dashboard} class="w-90 h-60"  alt="" />
+                                <img src={dashboard} className="w-90 h-60"  alt="" />
                             </div>
-                            <div>
-                                <p></p>
+                            <div className="text-left max-w-xl">
+                                <h1 className=" md:text-xl text-black-600 mt-1">Application de gestion de menus restaurant ZOMATEL</h1>
+                                <p className="text-gray-700 leading-relaxed">
+                                    Cette application web a été développée pour permettre aux responsables du restaurant ZOMATEL de gérer facilement les menus affichés sur le site.
+                                    Réalisée avec Django, elle comprend une interface d’administration sécurisée pour ajouter, modifier ou supprimer des plats, des catégories,
+                                    ainsi que gérer les images associées. Ce projet m’a permis de mettre en œuvre mes compétences en développement backend avec Django,
+                                    en intégrant une base de données robuste et des vues permettant une gestion complète des contenus en toute autonomie.
+                                </p>
+                                <small>Github : https://github.com/Rajomalahy/back_gestionHotel</small>
                             </div>
                         </div>
-                        <div>
+                        <div className="flex flex-col lg:flex-row justify-around p-8">
                             <div>
                                 <img src={login} class="w-90 h-60" alt="" />
                             </div>
-                            <div>
-                                <p></p>
+                            <div className="text-left max-w-xl">
+                                <h1 className="md:text-xl text-black-600 mt-1">Un login pour un projet personnel</h1>
+                                <p className="text-gray-700 leading-relaxed">
+                                    Ce formulaire de connexion a été développé dans le cadre d’un projet personnel. Il permet à un utilisateur de s’authentifier de manière sécurisée
+                                    avant d’accéder à l’application. L’objectif était de mettre en place un système de connexion simple, mais sécurisé,
+                                    tout en respectant les bonnes pratiques d’authentification côté frontend et backend.
+                                    Ce projet m’a permis d’expérimenter la gestion d’état avec React, ainsi que la communication avec une API d’authentification.
+                                </p>
+                                <small>Github : https://github.com/Rajomalahy/projet_rna</small>
                             </div>
                         </div>
                     </div>
@@ -99,50 +120,50 @@ export default function Profile(){
                 {/* education */}
                 <section>
                     <div>
-                        <h1 class="mt-10 text-2xl md:text-3xl font-bold text-gray-800">Educations</h1>
+                        <h1 className="mt-10 p-6 text-2xl md:text-3xl font-bold text-gray-800">Educations</h1>
                     </div>
-                    <div class=" mt-10 grid grid-cols-2 gap-4">
-                        <div class="shadow-xl/20 flex p-6 rounded-xl text-left gap-5">
+                    <div className=" mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 px-4">
+                        <div className="shadow-xl/20 flex p-6 rounded-xl text-left gap-5">
                             <div>
-                                <img src={mortier} class="h-15 w-15"/>
+                                <img src={mortier} className="h-12 w-12"/>
                             </div>
                             <div>
-                                <small class="font-bold text-gray-900">2020</small><br/>
+                                <small className="font-bold text-gray-900">2020</small><br/>
                                 <strong>Obtention du Baccalauréat série D </strong>
-                                <p class="text-gray-700">Lycée Présentation de Marie Manakara</p>
+                                <p className="text-gray-700">Lycée Présentation de Marie Manakara</p>
                             </div>
                         </div>
 
-                        <div class="shadow-xl/20 flex p-6 rounded-xl text-left gap-5">
+                        <div className="shadow-xl/20 flex p-6 rounded-xl text-left gap-5">
                             <div>
-                                <img src={mortier} class="h-15 w-15"/>
+                                <img src={mortier} className="h-12 w-12"/>
                             </div>
                             <div>
-                                <small class="font-bold text-gray-900">2021-2022</small><br/>
+                                <small className="font-bold text-gray-900">2021-2022</small><br/>
                                 <strong>Première année de licence en développement d'application intranet internet</strong>
-                                <p class="text-gray-700">Ecole de Management et d'Innovation Technologique</p>
+                                <p className="text-gray-700">Ecole de Management et d'Innovation Technologique</p>
                             </div>
                         </div>
 
-                        <div class="shadow-xl/20 flex p-6 rounded-xl text-left gap-5">
+                        <div className="shadow-xl/20 flex p-6 rounded-xl text-left gap-5">
                             <div>
-                                <img src={mortier} class="h-15 w-15"/>
+                                <img src={mortier} className="h-12 w-12"/>
                             </div>
                             <div>
-                                <small class="font-bold text-gray-900">2022-2023</small><br/>
+                                <small className="font-bold text-gray-900">2022-2023</small><br/>
                                 <strong>Deuscième année de licence en développement d'application intranet internet</strong>
-                                <p class="text-gray-700">Ecole de Management et d'Innovation Technologique</p>
+                                <p className="text-gray-700">Ecole de Management et d'Innovation Technologique</p>
                             </div>
                         </div>
 
-                        <div class="shadow-xl/20 flex p-6 rounded-xl text-left gap-5">
+                        <div className="shadow-xl/20 flex p-6 rounded-xl text-left gap-5">
                             <div>
-                                <img src={mortier} class="h-15 w-15"/>
+                                <img src={mortier} className="h-12 w-12"/>
                             </div>
                             <div>
-                                <small class="font-bold text-gray-900">2023-2024</small><br/>
+                                <small className="font-bold text-gray-900">2023-2024</small><br/>
                                 <strong>Troisième année de licence en développement d'application intranet internet</strong>
-                                <p class="text-gray-700">Ecole de Management et d'Innovation Technologique</p>
+                                <p className="text-gray-700">Ecole de Management et d'Innovation Technologique</p>
                             </div>
                         </div>
                     </div>
@@ -150,18 +171,18 @@ export default function Profile(){
 
                 {/* expériences */}
 
-                <section class="mt-15">
-                    <div>
-                        <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Expériences</h1>
+                <section className=" mt-15">
+                    <div className="p-9">
+                        <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Expériences</h1>
                     </div>
-                    <div class="flex justify-between">
+                    <div className="flex flex-col lg:flex-row justify-between">
                         <div>
-                            <img src={images} class="h-100 w-150" alt="" />
+                            <img src={images} className="h-100 w-130" alt="" />
                         </div>
                         <div>
-                            <div class="mt-4 max-w-lg text-left">
+                            <div className="mt-4 max-w-lg text-left">
                             <strong>Juin 2023 - Août 2023 : Conception et réalisation d'une application web pour la gestion du SALEM HOTEL - Marolook Fianarantsoa</strong>
-                            <p class="mt-1 text-gray-700 leading-relaxed">Durant ce stage, j'ai eu l'opportunité de développer une application web complète
+                            <p className="mt-1 text-gray-700 leading-relaxed">Durant ce stage, j'ai eu l'opportunité de développer une application web complète
                                 pour la gestion de Salem hôtel. Cette solution a été réalisée en utilisant PHP, Javascript 
                                 et le framework bootstrap pour le design responsive.
                                 L'application permet d'administrer efficacement les réservations, les chambres, les clients.
@@ -169,10 +190,10 @@ export default function Profile(){
                             <small>Langages/Framework : PHP , JavaScript, Bootstrap</small>
                             </div>
 
-                            <div class="mt-6 max-w-lg text-left">
+                            <div className="mt-6 max-w-lg text-left">
                                 <strong>Juin 2024 - Septembre 2024 : Conception et réalisation 
                                 d'une application de gestion des menus restaurant ZOMATEL - Zomatel Fianarantsoa </strong>
-                                <p class="mt-1 text-gray-700 leading-relaxed">J'ai créer un site web dynamique des menus restaurant en utilisant react et le framwork bootstrap
+                                <p className="mt-1 text-gray-700 leading-relaxed">J'ai créer un site web dynamique des menus restaurant en utilisant react et le framwork bootstrap
                                 et une application web pour gérer le site avec le framework django
                                 </p>
                                 <small>Langages/Framework : React, Django, Bootstrap</small>
@@ -181,20 +202,20 @@ export default function Profile(){
                     </div>
                 </section>
 
-                <footer>
-                    <hr class="mt-15"/>
+                <footer className='p-6'>
+                    <hr className="mt-15"/>
                     <div>
-                        <h1 class="mt-5 text-2xl md:text-3xl font-bold text-gray-800">Contact</h1>
+                        <h1 className="mt-5 text-2xl md:text-3xl font-bold text-gray-800">Contact</h1>
                     </div>
-                    <div class="mt-5 flex justify-center gap-15">
-                        <div class="flex gap-2">
-                            <img src={address} class="h-7 w-7" alt="" />Andrainjato Fianarantsoa
+                    <div className="mt-5 flex flex-col lg:flex-row justify-center gap-15">
+                        <div className="flex gap-2">
+                            <img src={address} className="h-7 w-7" alt="" />Andrainjato Fianarantsoa
                         </div>
-                        <div class="flex gap-2">
-                            <img src={phone} class="h-7 w-7" alt="" /> 034 89 684 32 / 034 24 737 13
+                        <div className="flex gap-2">
+                            <img src={phone} className="h-7 w-7" alt="" /> 034 89 684 32 / 034 24 737 13
                         </div>
-                        <div class="flex gap-2">
-                            <img src={email} class="h-7 w-7" alt="" /> nanncyrato@gmail.com
+                        <div className="flex gap-2">
+                            <img src={email} className="h-7 w-7" alt="" /> nanncyrato@gmail.com
                         </div>
                     </div>
                 </footer>
